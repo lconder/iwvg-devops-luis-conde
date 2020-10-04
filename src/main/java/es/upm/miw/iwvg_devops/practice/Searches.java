@@ -25,7 +25,7 @@ public class Searches {
                 .findFirst()
                 .get()
                 .decimal();
-    }
+    } // Bug Fixed ;)
 
     public Stream<String> findUserNameBySomeImproperFraction() {
         return new UsersDatabase().findAll()
