@@ -58,11 +58,15 @@ public class FractionTest {
     @Test
     void testIsProper() {
         assertTrue(fraction.isProper());
+        fraction.setNumerator(10);
+        assertFalse(fraction.isProper());
     }
 
     @Test
     void testIsImproper() {
         assertFalse(fraction.isImproper());
+        fraction.setNumerator(10);
+        assertTrue(fraction.isImproper());
     }
 
     @Test
@@ -98,6 +102,12 @@ public class FractionTest {
         result = addend1.add(addend2);
         assertEquals(2, result.getNumerator());
         assertEquals(1, result.getDenominator());
+    }
+
+    @Test
+    void testToString() {
+        String expected = "Fraction{numerator=2, denominator=4}";
+        assertEquals(expected, fraction.toString());
     }
 
 
