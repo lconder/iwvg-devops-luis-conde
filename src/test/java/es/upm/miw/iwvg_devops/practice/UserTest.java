@@ -17,6 +17,12 @@ public class UserTest {
     }
 
     @Test
+    void testUser() {
+        user = new User();
+        assertArrayEquals(new ArrayList<>().toArray(), user.getFractions().toArray());
+    }
+
+    @Test
     void testGetId() {
         assertEquals("1", user.getId());
     }
@@ -70,6 +76,17 @@ public class UserTest {
     @Test
     void testInitials() {
         assertEquals("L.", user.initials());
+    }
+
+    @Test
+    void testToString() {
+        String expected = "User{" +
+                "id='" + user.getId() + '\'' +
+                ", name='" + user.getName() + '\'' +
+                ", familyName='" + user.getFamilyName() + '\'' +
+                ", fractions=" + user.getFractions() +
+                '}';
+        assertEquals(expected, user.toString());
     }
 
 
