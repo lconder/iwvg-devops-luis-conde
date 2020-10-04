@@ -17,4 +17,9 @@ public class SearchesTest {
     void  testFindUserFamilyNameInitialBySomeProperFraction() {
         assertEquals(4, search.findUserFamilyNameInitialBySomeProperFraction().count());
     }
+
+    @Test
+    void  testFindUserIdBySomeProperFraction() {
+        assertEquals(4, search.findUserIdBySomeProperFraction().count());
+    }
 }
