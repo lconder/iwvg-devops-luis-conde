@@ -28,5 +28,10 @@ public class SearchesTest {
         assertEquals(2.0, search.findFirstDecimalFractionByUserName("Ana"));
     }
 
+    @Test
+    void  testFindUserNameBySomeImproperFraction() {
+        assertEquals(5, search.findUserNameBySomeImproperFraction().count());
+    }
+
 
 }
