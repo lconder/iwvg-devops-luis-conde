@@ -22,4 +22,11 @@ public class SearchesTest {
     void  testFindUserIdBySomeProperFraction() {
         assertEquals(4, search.findUserIdBySomeProperFraction().count());
     }
+
+    @Test
+    void  testFindFirstDecimalFractionByUserName() {
+        assertEquals(2.0, search.findFirstDecimalFractionByUserName("Ana"));
+    }
+
+
 }

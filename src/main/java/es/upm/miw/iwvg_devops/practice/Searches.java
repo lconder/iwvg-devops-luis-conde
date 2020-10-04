@@ -18,6 +18,13 @@ public class Searches {
                 .map(User::getId);
     }
 
-
+    public Double findFirstDecimalFractionByUserName(String name) {
+        return new UsersDatabase().findAll()
+                .filter(user -> name.equals(user.getName()))
+                .flatMap(user -> user.getFractions().stream())
+                .findFirst()
+                .get()
+                .decimal();
+    }
 
 }
